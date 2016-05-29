@@ -1,0 +1,29 @@
+<%- model_class = Product -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong>Código:</strong></dt>
+  <dd><%= @product.code %></dd>
+  <dt><strong>Tipo:</strong></dt>
+  <dd><%= @product.product_type %></dd>
+  <dt><strong>Nome:</strong></dt>
+  <dd><%= @product.name %></dd>
+  <dt><strong>Quantidade:</strong></dt>
+  <dd><%= @product.amount %></dd>
+  <dt><strong>Preço:</strong></dt>
+  <dd><%= @product.price %></dd>
+  <dt><strong>Tipo da transação:</strong></dt>
+  <dd><%= @product.transaction_type.camelize %></dd>
+</dl>
+
+<%= link_to 'Voltar',
+              products_path, :class => 'btn btn-default'  %>
+<%= link_to 'Editar',
+              edit_product_path(@product), :class => 'btn btn-default' %>
+<%= link_to 'Apagar',
+              product_path(@product),
+              :method => 'delete',
+              :data => { :confirm => 'Tem certeza que quer apagar?' },
+              :class => 'btn btn-danger' %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: 
+  product_type: MyString
+  name: MyString
+  amount: 
+  price: MyString
+  transaction_type: MyString
+
+two:
+  code: 
+  product_type: MyString
+  name: MyString
+  amount: 
+  price: MyString
+  transaction_type: MyString
